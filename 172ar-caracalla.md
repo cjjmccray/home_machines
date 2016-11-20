@@ -11,7 +11,7 @@ Post-upgrade restart on Sunday 20th November and... no side-bar and no top-bar m
 
 Right-click menu from the desktop does work, and from there am able to start a terminal and reboot.  Background image seen fleetingly when shutting down.  Restarted with still the same fault.  Have tried some reinstalls of unity and others (notes to follow), but no change.
 
-Suspect there's a service failing to start on reboot.  Having upgraded Severus at the same time (and that being OK), the "fresh from boot" `ps ax` list has been exported and uploaded here.
+Suspect there's a service failing to start on reboot.  Having upgraded Severus at the same time (and that being OK), the "fresh from boot" `ps ax` list has been exported and [uploaded here](https://github.com/cjjmccray/home_machines/blob/master/severus_process_list.txt).
 
 ## 16th September 2016
 * VLC
