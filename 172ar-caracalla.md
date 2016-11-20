@@ -36,8 +36,13 @@ Tried Kubuntu to start with but discarded after a few hours - struggling to unde
 * [Algodoo](http://www.algodoo.com/) for Windows, runs fine under Wine.  Inspired by reading about [Phun](https://en.wikipedia.org/wiki/Phun).
 * Firefox plugins: Scrapbook, Session Manager, Tree Style Tab
 
-# Windows 8.1
+## Windows 8.1
+Hardly used...
 
 
 # Hardware
 Lenovo laptop
+
+
+# Location, IP etc...
+See secure list on Evernote (search for "House Computers & Equipment").
