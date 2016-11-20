@@ -20,5 +20,5 @@ chrism@Severus:~$
 # Hardware
 [HP ProBook 6545b](http://h20564.www2.hp.com/hpsc/doc/public/display?docId=emr_na-c01897562)
 
-# Location
-Living Room
+# Location, IP etc...
+See secure list on Evernote (search for "House Computers & Equipment").
