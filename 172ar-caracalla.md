@@ -41,7 +41,7 @@ Hardly used...
 
 
 # Hardware
-Lenovo laptop
+[Lenovo G50-45](http://shop.lenovo.com/gb/en/laptops/lenovo/g-series/g50-45/) laptop
 
 
 # Location, IP etc...
