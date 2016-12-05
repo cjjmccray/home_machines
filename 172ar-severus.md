@@ -1,5 +1,12 @@
-# Software Log
-## Sat 19-Nov-2016
+# Software
+Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
+
+
+## Linux Ubuntu
+User home folders are not encrypted.
+
+
+### Sat 19-Nov-2016
 Upgraded from Ubuntu 16.04 LTS to 16.10.  Had to go through System Settings / Software & Updates / Updates first and change 'Notify me of a new Ubuntu version' to 'For any version'.
 
 Post update, the versioning stuff is now:
@@ -17,8 +24,32 @@ Codename:	yakkety
 chrism@Severus:~$ 
 ```
 
+Unlike the other laptops upgraded, there hasn't been a similar decrease in CPU temperature.  The machine usually hovers between 75 and 85 degrees C, occasionally hitting 95 and even 97 (after which the BIOS kicks-in and halts the machine to avoid heat damage).  Other machines have all seen a 10-20 degree C drop in usual CPU temperature from upgrading to a 4.8 kernel.
+
+
+### Fri 13-May-2016 - Installed Play on Linux
+To run, start a terminal and type: `playonlinux` and leave the terminal window open.
+http://sysads.co.uk/2014/07/install-playonlinux-4-2-4-on-ubuntu-14-04/
+
+Used it to install Kindle Reader under Wine and it worked a treat.
+http://sysads.co.uk/2014/08/install-amazon-kindle-ubuntu-14-04/
+
+Also upgraded to wine 1.8, but playonlinux has installed wine 1.7 as well.
+
+
+### Apr-2016
+Ubuntu upgraded to 16.04 (April 2016).
+
+If prompted to run 'sudo apt autoremove' to remove old stuff, that's done as a matter of course and won't be logged.
+
+
+## Windows 7
+Is installed, haven't booted it for a very long time (maybe not booted to Windows 7 in 2016).
+
+
 # Hardware
 [HP ProBook 6545b](http://h20564.www2.hp.com/hpsc/doc/public/display?docId=emr_na-c01897562)
+
 
 # Location, IP etc...
 See secure list on Evernote (search for "House Computers & Equipment").
