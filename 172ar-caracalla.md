@@ -17,7 +17,7 @@ Been trying to decrypt the encrypted home folder to copy all files off the drive
 4. Then from either Nautilus copy the files across, or in the case of any hidden folders (.bitcoin for instance) copy them at a terminal window or rename the folders temporarily to unhide them).
 
 
-## 19th November 2016
+### 19th November 2016
 Upgraded from Ubuntu 16.04 LTS to 16.10.
 
 Post-upgrade restart on Sunday 20th November and... no side-bar and no top-bar menus, and the background image isn't being shown.
@@ -26,7 +26,8 @@ Right-click menu from the desktop does work, and from there am able to start a t
 
 Suspect there's a service failing to start on reboot.  Having upgraded Severus at the same time (and that being OK), the "fresh from boot" `ps ax` list has been exported and [uploaded here](https://github.com/cjjmccray/home_machines/blob/master/severus_process_list.txt).
 
-## 16th September 2016
+
+### 16th September 2016
 * VLC
  * and in 'System Settings', 'Details' changed so VLC is default player for music and video.
 * grsync
@@ -40,17 +41,21 @@ Suspect there's a service failing to start on reboot.  Having upgraded Severus a
  * `sudo apt-get update`
  * `sudo apt-get install bitcoin-qt`
 
-## Linux - Ubuntu 16.04 LTS
+
+### Linux - Ubuntu 16.04 LTS
 All are installed using `apt-get install`, where a different repo is needed, details will be added as well
-## 9th September 2016
+
+
+### 9th September 2016
 Tried Kubuntu to start with but discarded after a few hours - struggling to understand how to anchor icons to the taskbar along the bottom, and realised I was trying to use it like Ubuntu.
 * youtube-dl
 * Wine
 * [Algodoo](http://www.algodoo.com/) for Windows, runs fine under Wine.  Inspired by reading about [Phun](https://en.wikipedia.org/wiki/Phun).
 * Firefox plugins: Scrapbook, Session Manager, Tree Style Tab
 
+
 ## Windows 8.1
-Hardly used...
+Hardly used... booted during late-November and early-December 2016 to force Windows updates through.
 
 
 # Hardware
