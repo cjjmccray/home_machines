@@ -11,9 +11,9 @@ Been trying to decrypt the encrypted home folder to copy all files off the drive
 1. Boot to Ubuntu 16.10 or 16.04 Live CD, to try not install.
 2. Find the disk in Nautilus and click to connect to it.
 3. In a terminal, go and find it properly there (you only need to do this to make sure you get the directory right in the command:
-..+ ecryptfs-recover-private /media/<UUID>/home/.ecryptfs/<USERNAME>/.Private
-..+ It will promt for the mount password, unlock the wrapped-passphrase and mount the directory in read only mode under /tmp/ with just single command. Use the flag -rw to mount the encrypted filesystem as read and write.
-..+ from http://askubuntu.com/questions/238047/how-do-i-mount-an-encrypted-home-directory-on-another-ubuntu-machine
+  + `ecryptfs-recover-private /media/<UUID>/home/.ecryptfs/<USERNAME>/.Private`
+  + It will promt for the mount password, unlock the wrapped-passphrase and mount the directory in read only mode under /tmp/ with just single command. Use the flag -rw to mount the encrypted filesystem as read and write.
+  + from http://askubuntu.com/questions/238047/how-do-i-mount-an-encrypted-home-directory-on-another-ubuntu-machine
 4. Then from either Nautilus copy the files across, or in the case of any hidden folders (.bitcoin for instance) copy them at a terminal window or rename the folders temporarily to unhide them).
 
 
@@ -28,17 +28,17 @@ Suspect there's a service failing to start on reboot.  Having upgraded Severus a
 
 ## 16th September 2016
 * VLC
-.* and in 'System Settings', 'Details' changed so VLC is default player for music and video.
+ * and in 'System Settings', 'Details' changed so VLC is default player for music and video.
 * grsync
 * get_iplayer
-.* follow [these instructions](http://www.christopherdowning.co.uk/2012/01/11/a-basic-get_iplayer-tutorial/)
-..* `sudo add-apt-repository ppa:jon-hedgerows/get-iplayer`
-..* `sudo apt-get update`
-..* `sudo apt-get install get-iplayer`
+ * follow [these instructions](http://www.christopherdowning.co.uk/2012/01/11/a-basic-get_iplayer-tutorial/)
+  * `sudo add-apt-repository ppa:jon-hedgerows/get-iplayer`
+  * `sudo apt-get update`
+  * `sudo apt-get install get-iplayer`
 * Bitcoin
-.* `sudo apt-add-repository ppa:bitcoin/bitcoin`
-.* `sudo apt-get update`
-.* `sudo apt-get install bitcoin-qt`
+ * `sudo apt-add-repository ppa:bitcoin/bitcoin`
+ * `sudo apt-get update`
+ * `sudo apt-get install bitcoin-qt`
 
 ## Linux - Ubuntu 16.04 LTS
 All are installed using `apt-get install`, where a different repo is needed, details will be added as well
