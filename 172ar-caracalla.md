@@ -2,10 +2,10 @@
 
 Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 
-# Linux Ubuntu
+## Linux Ubuntu
 User home folders *are* encrypted.
 
-## 05-Dec-2016
+### 05-Dec-2016
 Been trying to decrypt the encrypted home folder to copy all files off the drive to allow full re-install (try 16.10 first, if still fails, revert to 16.04).
 
 1. Boot to Ubuntu 16.10 or 16.04 Live CD, to try not install.
