@@ -12,7 +12,7 @@ Been trying to decrypt the encrypted home folder to copy all files off the drive
 2. Find the disk in Nautilus and click to connect to it.
 3. In a terminal, go and find it properly there (you only need to do this to make sure you get the directory right in the command:
   + `ecryptfs-recover-private /media/<UUID>/home/.ecryptfs/<USERNAME>/.Private`
-  + It will promt for the mount password, unlock the wrapped-passphrase and mount the directory in read only mode under /tmp/ with just single command. Use the flag -rw to mount the encrypted filesystem as read and write.
+  + It will promt for the mount password, unlock the wrapped-passphrase and mount the directory in read only mode under /tmp/ with just single command. Use the flag `--rw` to mount the encrypted filesystem as read and write.
   + from http://askubuntu.com/questions/238047/how-do-i-mount-an-encrypted-home-directory-on-another-ubuntu-machine
 4. Then from either Nautilus copy the files across, or in the case of any hidden folders (.bitcoin for instance) copy them at a terminal window or rename the folders temporarily to unhide them).
 
