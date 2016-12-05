@@ -5,6 +5,7 @@ Currently there are:
 * geta - Raspberry Pi fileserver
 * rome - Raspberry Pi fileserver
 * galerius - Raspberry Pi FlightRadar24 node
+* minervina - Raspberry Pi ZoneMinder camera monitor
 * severus - laptop (living room)
 * diocletian - laptop
 * caracalla - laptop (bedroom)
