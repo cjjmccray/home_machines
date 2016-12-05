@@ -6,6 +6,10 @@ Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 User home folders *are* encrypted.
 
 
+### Nov-2016
+Upgraded to Ubuntu 16.10.
+
+
 ### 09-May-2016 - Error running sudo apt-get update
 
     chrism@diocletian:~$ sudo apt-get update
