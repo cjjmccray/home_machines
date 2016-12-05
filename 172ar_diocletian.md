@@ -1,5 +1,5 @@
 # Software
-Name chosen: [diocletian](http://www.roman-emperors.org/diocletian.htm)
+Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 
 
 ## Linux Ubuntu
