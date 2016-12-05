@@ -28,17 +28,17 @@ Suspect there's a service failing to start on reboot.  Having upgraded Severus a
 
 ## 16th September 2016
 * VLC
-** and in 'System Settings', 'Details' changed so VLC is default player for music and video.
+.* and in 'System Settings', 'Details' changed so VLC is default player for music and video.
 * grsync
 * get_iplayer
-** follow [these instructions](http://www.christopherdowning.co.uk/2012/01/11/a-basic-get_iplayer-tutorial/)
-*** `sudo add-apt-repository ppa:jon-hedgerows/get-iplayer`
-*** `sudo apt-get update`
-*** `sudo apt-get install get-iplayer`
+.* follow [these instructions](http://www.christopherdowning.co.uk/2012/01/11/a-basic-get_iplayer-tutorial/)
+..* `sudo add-apt-repository ppa:jon-hedgerows/get-iplayer`
+..* `sudo apt-get update`
+..* `sudo apt-get install get-iplayer`
 * Bitcoin
-** `sudo apt-add-repository ppa:bitcoin/bitcoin`
-** `sudo apt-get update`
-** `sudo apt-get install bitcoin-qt`
+.* `sudo apt-add-repository ppa:bitcoin/bitcoin`
+.* `sudo apt-get update`
+.* `sudo apt-get install bitcoin-qt`
 
 ## Linux - Ubuntu 16.04 LTS
 All are installed using `apt-get install`, where a different repo is needed, details will be added as well
