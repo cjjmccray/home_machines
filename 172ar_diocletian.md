@@ -288,8 +288,13 @@ Ubuntu 15.04 (April/May 2015) upgraded to 15.10 (October 2015) and 16.04 (April 
 
 If prompted to run 'sudo apt autoremove' to remove old stuff, that's done as a matter of course and won't be logged.
 
+
+## Slackware 14.1 (64-bit)
+Kernel 3.10.17.
+
+
 ## Windows 7
-Is installed, but it blue-screens briefly while booting then reboots immediately.  i.e. is unusable.
+Is installed, but it blue-screens briefly while booting then reboots immediately.  i.e. is unusable.  Recovery boot prompts for Windows 7 CD/DVD which I don't have, though could probably get from the Microsoft website easily enough.  Although the bottom of the laptop has no Windows COA licence sticker, so that might come completely unstuck.
 
 
 # Hardware
