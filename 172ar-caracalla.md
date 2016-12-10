@@ -5,6 +5,16 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 10-Dec-2016
+Ubuntu 16.10 installed successfully with encypted home folder.
+
+Firefox add-ons:
+
+1. [Session Manager](https://addons.mozilla.org/en-US/firefox/addon/session-manager/?src=search)
+2. [Scrapbook X](https://addons.mozilla.org/en-US/firefox/addon/scrapbook-x/?src=search) in replacement and to try out an alternative to [Scrapbook](https://addons.mozilla.org/en-US/firefox/addon/scrapbook/?src=search)
+3. [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
+
+
 ### 05-Dec-2016
 Been trying to decrypt the encrypted home folder to copy all files off the drive to allow full re-install (try 16.10 first, if still fails, revert to 16.04).
 
