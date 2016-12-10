@@ -5,6 +5,13 @@ Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 10-Dec-2016
+HipChat 4 installed and used to login to my MetaPack HipChat account.
+
+```
+chrism@diocletian:~/Downloads$ wget https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.0.1517-Linux.deb
+chrism@diocletian:~/Downloads$ sudo dpkg -i HipChat4-4.0.1517-Linux.deb
+```
 
 ### Nov-2016
 Upgraded to Ubuntu 16.10.
