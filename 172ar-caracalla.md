@@ -5,6 +5,50 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 11-Dec-2016
+VLC installed - don't think I had to add a repo for this, just ran:
+```
+sudo apt-get update
+sudo apt-get install vlc vlc-plugin-*
+```
+
+Finally got the Bitcoin .bitcoin folder to copy across, two block files had to be copied separately as their copy jobs failed due to wifi connection timing out.
+```
+sudo add-apt-repository ppa:bitcoin/bitcoin 
+sudo apt-get update
+sudo apt-get install bitcoin-qt
+```
+
+with 3 weeks to catch-up, that took about 15 hours.
+
+Wine installed:
+```
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine1.8 winetricks
+```
+
+Version 1.8 actually results in 1.6 being installed, though I tried 2.2, 2.1, 2.0 and 1.9 first - all failed.  Still didn't make it the usually app for Windows/DOS exe files and didn't register as an app.  So...
+```
+chrism@caracalla:~$ sudo apt-get install wine
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package wine is a virtual package provided by:
+  wine-stable 1.8.5-1ubuntu1
+  wine-development 1.9.20-1ubuntu1
+You should explicitly select one to install.
+
+E: Package 'wine' has no installation candidate
+chrism@caracalla:~$ sudo apt-get install wine-stable
+```
+
+WineTricks is available as a listed/known app - ran it and it sits there with an "updating the configuration" message.  Left it to run... after about 5 minutes it finished, but doesn't seem right.
+
+
+Algodoo ([Windows version](http://www.algodoo.com/download/)) - downloaded but unable to check.
+
+
 ### 10-Dec-2016
 Ubuntu 16.10 installed successfully with encypted home folder.
 
