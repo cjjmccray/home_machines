@@ -5,6 +5,9 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 12-Dec-2016
+Mucking around with Eesti e-ID card, had to remove the Yakkety Wine PPA - it doesn't have "Release" details so upends `apt-get update`.
+
 ### 11-Dec-2016
 VLC installed - don't think I had to add a repo for this, just ran:
 ```
