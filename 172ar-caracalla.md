@@ -5,6 +5,21 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 17-Dec-2016
+Updated hosts file from [Evernote](https://www.evernote.com/Home.action#n=b6a2715d-60fa-479f-801f-5d9a04ec485a&ses=1&sh=5&sds=5&x=hosts&).
+
+Install cifs-utils:
+```
+sudo apt-get install cifs-utils
+```
+
+Added this line to `/etc/fstab` to try and allow network-share-stored Scrapbook archiving:
+```
+//geta/Research /mnt/Research cifs credentials=/home/chrism/.smbcredentials,rw,user 0 0
+```
+though I'm suspicious that the credentials file will be inaccessbile at boot time when `/etc/fstab` is used, as the encrypted folder it is stored in will not have been decrypted at that point.
+
+
 ### 12-Dec-2016
 Mucking around with Eesti e-ID card, had to remove the Yakkety Wine PPA - it doesn't have "Release" details so upends `apt-get update`.
 
