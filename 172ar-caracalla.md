@@ -5,6 +5,9 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 03-Feb-2017
+Installed Google Chrome using [these instructions](http://askubuntu.com/questions/510056/how-to-install-google-chrome).
+
 ### 17-Dec-2016
 Updated hosts file from [Evernote](https://www.evernote.com/Home.action#n=b6a2715d-60fa-479f-801f-5d9a04ec485a&ses=1&sh=5&sds=5&x=hosts&).
 
