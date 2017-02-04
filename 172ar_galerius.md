@@ -1,3 +1,4 @@
+RasPi B v3, Raspbian, FlightRader24.com node
 
 ## 04-Feb-2017
 Actually carried out between Christmas 2016 and New Year 2017, shortened the antenna to 67mm and mounted (glued) onto an old coffee tub, [using these instructions](http://forum.flightradar24.com/threads/9711-Optimize-the-Whip-Antenna-Which-Is-Supplied-With-DVB-T-Dongle).
