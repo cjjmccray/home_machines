@@ -5,6 +5,13 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 ## Linux Ubuntu
 User home folders are not encrypted.
 
+### Sat 04-Feb-2017
+Hard disk finally failed, replaced with 1Tb thing hanging around.  Installed Ubuntu 16.10, no Windows at all.
+
+Assigned fixed IP, edited `/etc/network/interfaces`, `/etc/hosts`.
+
+Installed samba and cifs-utils: `sudo apt-get install samba cifs-utils` to be able to set workgroup on Samba client.
+
 
 ### Sat 19-Nov-2016
 Upgraded from Ubuntu 16.04 LTS to 16.10.  Had to go through System Settings / Software & Updates / Updates first and change 'Notify me of a new Ubuntu version' to 'For any version'.
