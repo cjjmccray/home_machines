@@ -6,7 +6,20 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 User home folders *are* encrypted.
 
 ### 03-Feb-2017
-Installed Google Chrome using [these instructions](http://askubuntu.com/questions/510056/how-to-install-google-chrome).
+Installed Calibre using [these instructions](http://askubuntu.com/questions/538413/how-to-install-latest-calibre-any-package-on-ubuntu):
+```
+sudo -v && 
+  wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | 
+  sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
+```
+
+Installed Google Chrome using [these instructions](http://askubuntu.com/questions/510056/how-to-install-google-chrome):
+```
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo apt-get update 
+sudo apt-get install google-chrome-stable
+```
 
 ### 17-Dec-2016
 Updated hosts file from [Evernote](https://www.evernote.com/Home.action#n=b6a2715d-60fa-479f-801f-5d9a04ec485a&ses=1&sh=5&sds=5&x=hosts&).
