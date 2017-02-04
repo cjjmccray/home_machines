@@ -5,6 +5,16 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 04-Feb-2017
+Chrome/Chromium - APK downloader plugin to allow [installing WhatsApp on my Samsung Android tablet](http://ccm.net/faq/32349-android-how-to-install-whatsapp-on-a-wi-fi-only-device):
+1. [download APK Downloader](http://ccm.net/faq/32225-google-chrome-download-apks-from-google-play) and drag/drop to the add-ons page in Chrome/Chromium
+  + get the APK file from the [Internet Archive](http://web.archive.org/web/20130701000000*/http://codekiem.com/apk-downloader/crx/1.4.3.crx)
+  + `wget "http://web.archive.org/web/20130816070345/http://codekiem.com/apk-downloader/crx/1.4.3.crx"`
+2. on the phone (where you already have WhatsApp installed), installed [Device ID by redphx](https://play.google.com/store/apps/details?id=com.redphx.deviceid&hl=en) from the Google Play Store
+3. back to Chrome/Chromium and go into the Settings for Device ID and put in the Android device ID, your e-mail and password
+  + this didn't work!
+4. [WhatsApp on the Google Play Store](https://play.google.com/store/apps/details?id=com.whatsapp)
+
 ### 03-Feb-2017
 Installed Calibre using [these instructions](http://askubuntu.com/questions/538413/how-to-install-latest-calibre-any-package-on-ubuntu):
 ```
