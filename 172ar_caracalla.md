@@ -16,6 +16,7 @@ Chrome/Chromium - APK downloader plugin to allow [installing WhatsApp on my Sams
   + Installed [another add-on](https://chrome.google.com/webstore/detail/direct-apk-downloader/bifidglkmlbfohchohkkpdkjokajibgg?hl=en) which does login but no sign of it downloading properly.
   + Also have to get the device description right.
 4. [WhatsApp on the Google Play Store](https://play.google.com/store/apps/details?id=com.whatsapp)
+5. There's a Firefox Plugin that [does the same](https://addons.mozilla.org/en-GB/firefox/addon/apk-downloader/) (and is much better imho)
 
 ### 03-Feb-2017
 Installed Calibre using [these instructions](http://askubuntu.com/questions/538413/how-to-install-latest-calibre-any-package-on-ubuntu):
