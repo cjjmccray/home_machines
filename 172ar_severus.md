@@ -15,7 +15,7 @@ user-session=ubuntu
 greeter-session=unity-greeter
 allow-guest=true
 ```
-and that restores the guest login.
+I also added the same section to `/etc/lightdm/users.conf` though am not sure if that was absolutely necessary.  One or both of these has restored the guest login.
 
 
 ### Sat 04-Feb-2017
