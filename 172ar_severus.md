@@ -5,6 +5,19 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 ## Linux Ubuntu
 User home folders are not encrypted.
 
+### 15-May-2017
+Weirdly the guest login has disappeared.  Rebooted and it's just not there.  Found instructions to remove the guest login [https://askubuntu.com/questions/451526/removing-guest-session-at-login-in-ubuntu-14-04](here) and [https://www.howtogeek.com/117994/how-to-disable-ubuntus-guest-session-account/](here).
+
+Reversing these, created from scratch `/etc/lightdm/lightdm.conf` with:
+```
+[SeatDefaults]
+user-session=ubuntu
+greeter-session=unity-greeter
+allow-guest=true
+```
+and that restores the guest login.
+
+
 ### Sat 04-Feb-2017
 Hard disk finally failed, replaced with 1Tb thing hanging around.  Installed Ubuntu 16.10, no Windows at all.
 
