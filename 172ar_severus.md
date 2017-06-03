@@ -3,7 +3,25 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 
 
 ## Linux Ubuntu
-User home folders are not encrypted.
+17.04. User home folders are not encrypted.
+
+### 03-Jun-2017
+Installed...
+- `sudo apt-get install cryptsetup-bin`
+  - to allow LUKS encrypted partitions to work for new 4Gb backup drive
+- sudo apt install hashalot
+  - turns out `sha256sum` etc... aren't installed by default as terminal programs
+- added right-click file checksumming to Nautilus [from these instructions](https://solus-project.com/forums/viewtopic.php?t=2672)
+  - note, use the modified script in [my repo here](https://github.com/cjjmccray/linux_shell_scripts/blob/master/Checksums) as the line-spacing is borked in the versions in that forum
+- installed and uninstalled [HashChecker](http://ubuntuguide.net/md5sha256-hash-checker-gui-for-ubuntu-downloadsfiles) and [here](https://www.gnome-look.org/content/download.php?content=129309&id=1&tan=39290839) as the source code is missing from [this Dropbox folder](https://dl.dropboxusercontent.com/u/9350208/CurrentVersion/)
+- Jacksum
+  - installed from [here](http://jacksum.net/en/download.html)
+  - manually installed into `/bin/jacksum`
+- Java
+  - installed the Java SE runtime, manually into `/bin/java`
+  - there's a symlink from `/bin/java/jre` to the version-numbered folder, to allow for multiple versions to be handled at some point in the future
+- sudo apt install cryptsetup
+  - was prompted by `apt` to install this, suspect it's a recommendation after installing cryptsetup-bin
 
 ### 15-May-2017
 Weirdly the guest login has disappeared.  Rebooted and it's just not there.  Found instructions to remove the guest login [https://askubuntu.com/questions/451526/removing-guest-session-at-login-in-ubuntu-14-04](here) and [https://www.howtogeek.com/117994/how-to-disable-ubuntus-guest-session-account/](here).
