@@ -5,6 +5,13 @@ Name chosen: [caracalla](http://www.roman-emperors.org/caracala.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 19-Aug-2017
+Installed [Wine](https://wiki.winehq.org/Ubuntu) to be able to get [mp3Directcut](http://mpesch3.de1.cc/mp3dc.html) to work - which it does perfectly.
+
+Previously had upgraded to Ubuntu 17.04.
+
+Uninstalled Dropbox for the SECOND time, as it keeps syncing and blowing out the 5Gb free storage you get from Dropbox.
+
 ### 04-Feb-2017
 Chrome/Chromium - APK downloader plugin to allow [installing WhatsApp on my Samsung Android tablet](http://ccm.net/faq/32349-android-how-to-install-whatsapp-on-a-wi-fi-only-device):
 1. [Download APK Downloader](http://ccm.net/faq/32225-google-chrome-download-apks-from-google-play) and drag/drop to the add-ons page in Chrome/Chromium
