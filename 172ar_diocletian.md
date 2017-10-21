@@ -5,6 +5,16 @@ Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 20-Oct-2017
+Upgraded to Ubuntu 17.10.
+
+Also installed [two benchmarking/system listing tools](https://askubuntu.com/questions/198978/is-there-a-benchmark-tool-for-ubuntu):
+* hardinfo (runs in the GUI) - sudo apt-get install hardinfo
+* Phoronix Test Suite (terminal only) - sudo apt-get install phoronix-test-suite
+
+### Apr-2017
+Upgraded to Ubuntu 17.04
+
 ### 10-Dec-2016
 HipChat 4 installed and used to login to my MetaPack HipChat account.
 
