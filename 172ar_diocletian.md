@@ -11,6 +11,7 @@ Upgraded to Ubuntu 17.10.
 Also installed [two benchmarking/system listing tools](https://askubuntu.com/questions/198978/is-there-a-benchmark-tool-for-ubuntu):
 * hardinfo (runs in the GUI) - sudo apt-get install hardinfo
 * Phoronix Test Suite (terminal only) - sudo apt-get install phoronix-test-suite
+** uninstalled afterwards - it's old and difficult to use
 
 ### Apr-2017
 Upgraded to Ubuntu 17.04
