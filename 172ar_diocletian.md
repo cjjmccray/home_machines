@@ -5,6 +5,14 @@ Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 04-Nov-2017
+Added get_iplayer. Had to [install this PPA](https://launchpad.net/~jon-hedgerows/+archive/ubuntu/get-iplayer):
+```
+sudo add-apt-repository ppa:jon-hedgerows/get-iplayer
+sudo apt-get update
+sudo apt install get-iplayer
+```
+
 ### 20-Oct-2017
 Upgraded to Ubuntu 17.10.
 
