@@ -1,9 +1,22 @@
 # Software
 Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 
-
 ## Linux Ubuntu
-17.04. User home folders are not encrypted.
+17.10. User home folders are not encrypted.
+
+### 17-Nov-2017
+- Firefox updated automatically to 57.0, TreeStyleTab also updated to 2.2.9
+- [Node.js and npm](https://uk.godaddy.com/help/install-nodejs-ubuntu-17395)
+- [n](https://github.com/tj/n)
+  - then moved /usr/bin/node and put a link in place to /usr/local/bin/node
+  - node.js now v9.2.0
+
+### 10-Nov-2017
+Replaced hard disk with SSD drive (old disk crashed/broken).  Installed:
+- Ubuntu 17.10
+- get_iplayer
+- youtube-dl
+- TreeStyleTab under Firefox - had to install 1.9 version from 3+ months ago to get it to work
 
 ### 03-Jun-2017
 Installed...
