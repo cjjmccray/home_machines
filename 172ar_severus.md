@@ -10,6 +10,10 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 - [n](https://github.com/tj/n)
   - then moved /usr/bin/node and put a link in place to /usr/local/bin/node
   - node.js now v9.2.0
+- Wine, PlayOnLinux, Amazon Kindle Reader
+  - [Add the repo](https://www.winehq.org/pipermail/wine-devel/2017-March/117104.html)
+  - [Install Wine 1.7 Tricks then PlayOnLinux](https://sysads.co.uk/2014/07/23/install-playonlinux-4-2-4-on-ubuntu-14-04/)
+  - [Amazon Kindle](https://sysads.co.uk/2014/08/19/install-amazon-kindle-ubuntu-14-04/)
 
 ### 10-Nov-2017
 Replaced hard disk with SSD drive (old disk crashed/broken).  Installed:
