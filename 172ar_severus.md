@@ -14,6 +14,7 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
   - [Add the repo](https://www.winehq.org/pipermail/wine-devel/2017-March/117104.html)
   - [Install Wine 1.7 Tricks then PlayOnLinux](https://sysads.co.uk/2014/07/23/install-playonlinux-4-2-4-on-ubuntu-14-04/)
   - [Amazon Kindle](https://sysads.co.uk/2014/08/19/install-amazon-kindle-ubuntu-14-04/)
+    - took about 45 minutes to setup the Windows drive
   - PlayOnLinux won't install Microsoft Core Fonts - starts downloading andale32.exe then fails, and others are [having the same problem](https://www.playonlinux.com/en/topic-15164-Cannot_install_core_fonts.html)
 
 ### 10-Nov-2017
