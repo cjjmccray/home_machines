@@ -6,6 +6,13 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 
 ### 17-Nov-2017
 - Firefox updated automatically to 57.0, TreeStyleTab also updated to 2.2.9
+  - TreeStyleTab works differently - the core Firefox add-on platform has changed, no XUL/XPCOM elements, but web-API based things
+  - Only visible difference is in the tabs appear across the top as well as down the side
+  - There *is* a problem with [Scrapbook X](https://addons.mozilla.org/en-US/firefox/addon/scrapbook/) - it doesn't work at all, and might never
+  - Changing to the [Pale Moon browser fork from Firefox](https://en.wikipedia.org/wiki/Pale_Moon_(web_browser)) is an option, but using a forked browser like that will break other things as well
+  - Waiting *is* an option - there might be some movement in support for XUL/XPCOM or conversion of Scrapbook X to use the web API
+  - Running two versions of Firefox/Pale Moon to be able to Scrapbook stuff you need to for legal/archive reasons is also a possibility (and using a PortableApps version of Firefox on Windows, say).
+  - Some discussion forums have more info: [here](https://github.com/danny0838/firefox-scrapbook/issues/85), [here](https://github.com/danny0838/firefox-scrapbook/issues/162) and [here](https://blog.mozilla.org/addons/2016/11/23/add-ons-in-2017/).
 - [Node.js and npm](https://uk.godaddy.com/help/install-nodejs-ubuntu-17395)
 - [n](https://github.com/tj/n)
   - then moved /usr/bin/node and put a link in place to /usr/local/bin/node
