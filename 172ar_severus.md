@@ -4,6 +4,14 @@ Name chosen: [Severus](http://www.roman-emperors.org/severus.htm)
 ## Linux Ubuntu
 17.10. User home folders are not encrypted.
 
+### 17-Feb-2018
+- USB DVB-T sticks - trying to commission the new Win10 machine in the kitchen and none of the DVB-T sticks work.
+  - The old Toshiba stick is not recognised by Win10 (not tried it with Linux)
+  - The 2x older RealTek 2832U sticks I've had for a while (intending to put together FlightRadar24 boxes, I think), work but don't tune any channels on Win10 or on Linux using Me-TV
+  - The 1x newer RealTek 2832U stick bought in the past 3 months (couldn't find the others), also works but doesn't tune any channels on Win10 (not tried it with Linux)
+  - some useful stuff... [DigitalUK.co.uk - coverage checker, use Winter Hill but Moel-y-Parc is in range](http://www.digitaluk.co.uk/coveragechecker/main/trade/M16+9QB/172/0/jlq18q7eqpd69ceugsjaeqi3u6); UKFree.TV coverage for [Winter Hill](https://ukfree.tv/transmitters/tv/Winter_Hill) and [Moel-y-Parc](https://ukfree.tv/transmitters/tv/Moel_y_Parc)
+  - finding a working DVB-T software for Linux is ridiculous: MythTV needs a backend working which has to run as root (and won't); Me TV has been removed but [can be found here](https://ubuntu.pkgs.org/16.04/ubuntu-universe-amd64/me-tv_1.3.7-1build2_amd64.deb.html) - download the amd_64.deb file and [install using these instructions](https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt) `sudo dpkg -i /path/to/deb/file`  followed by `sudo apt-get install -f`
+
 ### 17-Nov-2017
 - Firefox updated automatically to 57.0, TreeStyleTab also updated to 2.2.9
   - TreeStyleTab works differently - the core Firefox add-on platform has changed, no XUL/XPCOM elements, but web-API based things
