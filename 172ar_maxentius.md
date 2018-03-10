@@ -50,6 +50,11 @@ Latest version is compatible with Firefox 57.0+ ("Quantium") - just search for i
 #### Old files
 Copied from Severus backup on 4Gb removable drive to same folders on Maxentius.
 
+#### GIMP
+Installed using [these instructions](http://ubuntuhandbook.org/index.php/2015/11/how-to-install-gimp-2-8-16-in-ubuntu-16-04-15-10-14-04/)
+- PPA is here: ```sudo add-apt-repository ppa:otto-kesselgulasch/gimp```
+then ```apt-get update``` and  ```apt-get install gimp```
+
 ### Sat 03-Mar-2018
 Initial commissioning.  Resized partitions from 240Gb all to Win10 to 120Gb each for Win10 and Ubuntu.  Win10 boots OK after resizing.
 - youtube-dl
