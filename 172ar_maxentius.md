@@ -69,7 +69,7 @@ Also has a full Microsoft Office 2016 Pro install with licence.
 
 
 # Hardware
-[Lenovo T430](http://link.to/the-manufacturers-website-or-other-good-specification-list), with 16Gb RAM, 240Gb SSD disk, purchased 2nd hand from eBay, March 2018.
+[Lenovo T430](https://www3.lenovo.com/gb/en/laptops/thinkpad/t-series/t430/), with 16Gb RAM, 240Gb SSD disk, purchased 2nd hand from eBay, March 2018.
 
 
 # Location, IP etc...
