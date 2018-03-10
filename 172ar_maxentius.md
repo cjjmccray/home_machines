@@ -12,28 +12,43 @@ User home folders *are* encrypted.
 ```sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev```
 ```sudo apt install python```
 
-- Calibre
+#### Calibre
 ``` sudo -v && ```
 ```  wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | ```
 ```  sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"```
 
-- [Node.js and npm](https://uk.godaddy.com/help/install-nodejs-ubuntu-17395)
-- [n](https://github.com/tj/n)
-  - then moved /usr/bin/node and put a link in place to /usr/local/bin/node
-  - node.js now v9.2.0
-- Wine, PlayOnLinux, Amazon Kindle Reader
-  - [Add the repo](https://www.winehq.org/pipermail/wine-devel/2017-March/117104.html)
-  - [Install Wine 1.7 Tricks then PlayOnLinux](https://sysads.co.uk/2014/07/23/install-playonlinux-4-2-4-on-ubuntu-14-04/)
-  - [Amazon Kindle](https://sysads.co.uk/2014/08/19/install-amazon-kindle-ubuntu-14-04/)
-    - took about 45 minutes to setup the Windows drive
-  - PlayOnLinux won't install Microsoft Core Fonts - starts downloading andale32.exe then fails, and others are [having the same problem](https://www.playonlinux.com/en/topic-15164-Cannot_install_core_fonts.html)
+#### [Node.js and npm](https://uk.godaddy.com/help/install-nodejs-ubuntu-17395)
+Follow all the instructions especially getting nvm installed.
 
-- get_iplayer
-- TreeStyleTab under Firefox - had to install 1.9 version from 3+ months ago to get it to work
+Node.js in ```/usr/bin``` stays out of date, set a link to the version under your profile (or copy the node file to ```/usr/bin```)
+- ```ls -lrt ~/.nvm/versions/node/v9.8.0/bin/node```
+  - ```-rwxr-xr-x 1 chrism chrism 35177169 Mar  7 21:40 /home/chrism/.nvm/versions/node/v9.8.0/bin/node```
+I've moved the old node in /usr/bin to node-6-11-4 and set it not executable.  Symlink in place to the local copy of node.
 
-#### Play on Linux
+#### [n](https://github.com/tj/n)
+- Prefix the install command with ```sudo```
+- Node.js version is v6.11.4 (not v9.2.0)
 
-#### Amazon Kindle (maxentius)
+#### Wine, PlayOnLinux, Amazon Kindle Reader
+- [Add the repo](https://www.winehq.org/pipermail/wine-devel/2017-March/117104.html)
+  - Install using: ```sudo apt get update```
+  - then: ```sudo apt-get install winehq-devel```  
+- [Install Wine 1.7 Tricks then PlayOnLinux](https://sysads.co.uk/2014/07/23/install-playonlinux-4-2-4-on-ubuntu-14-04/)
+- [Amazon Kindle](https://sysads.co.uk/2014/08/19/install-amazon-kindle-ubuntu-14-04/)
+  - took about 45 minutes to setup the Windows drive
+- PlayOnLinux won't install Microsoft Core Fonts - starts downloading andale32.exe then fails, and others are [having the same problem](https://www.playonlinux.com/en/topic-15164-Cannot_install_core_fonts.html)
+
+#### get_iplayer
+Following [instructions from here](https://launchpad.net/~jon-hedgerows/+archive/ubuntu/get-iplayer):
+- ```sudo add-apt-repository ppa:jon-hedgerows/get-iplayer```
+- ```sudo apt-get update```
+- ```sudo apt-get install get-iplayer```
+
+#### TreeStyleTab under Firefox
+Latest version is compatible with Firefox 57.0+ ("Quantium") - just search for it and install.
+
+#### Old files
+Copied from Severus backup on 4Gb removable drive to same folders on Maxentius.
 
 ### Sat 03-Mar-2018
 Initial commissioning.  Resized partitions from 240Gb all to Win10 to 120Gb each for Win10 and Ubuntu.  Win10 boots OK after resizing.
