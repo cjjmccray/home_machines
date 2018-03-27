@@ -1,5 +1,10 @@
 # New Kitchen PC
 
+## Still to install
+- Firefox: Ghostery
+- Firefox: Tree Style Tab
+- Fonts - copy to/from archive (where?) (rule: copy *from* this machine first - overwrite if newer; install *to* this machine second - only those missing)
+
 ## Tue 27-Mar-2018
 ### Canon Scanner - CanoScan LiDE 700F
 - [Driver for Windows 10 (64-bit)](https://www.canon.co.uk/support/consumer_products/products/scanners/lide_series/canoscan_lide_700f.aspx?type=drivers&language=&os=WINDOWS%2010%20(64-bit)) and there's a Linux driver too
