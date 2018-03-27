@@ -1,6 +1,19 @@
 # New Kitchen PC
 
 ## Tue 27-Mar-2018
+### Canon Scanner - CanoScan LiDE 700F
+- [Driver for Windows 10 (64-bit)](https://www.canon.co.uk/support/consumer_products/products/scanners/lide_series/canoscan_lide_700f.aspx?type=drivers&language=&os=WINDOWS%2010%20(64-bit)) and there's a Linux driver too
+
+### GIMP
+- [Download from here](https://www.gimp.org/downloads/) v2.8.22
+
+### uTorrent
+- [uTorrent Classic](https://www.utorrent.com/#comp-tbl) not the "web" version - and then choose the free version (there's two hoops to go through)
+- When installing, make sure you switch *off* starting uTorrent when Windows starts up, and don't install anything else (this time round I was prompted to install Opera)
+
+### NordVPN
+- Login to the [NordVPN website](https://www.nordvpn.com) and you get to the [downloads page](https://ucp.nordvpn.com/downloads)
+
 ### Network Drives
 Connected R: to \\rome\drive_4 and M: to \\geta\music.  Trying to edit a video clip on R: back to R: (Prom 01 concert from 2010) and though it starts to work, about 15% in the copy/edit stops and "completes".  Also getting disconnected network drives and the network icon in the lower-right tray showing disconnected.  Copied the file directly to C: and operated the edit only from C: to C: and it works OK.  Suspect driver or worse, intermittent hardware failure/complete failure.  Short-term fix if that's the case is a USB network connector, but ultimately this is how your old office PC went and will eventually go stupid with massive interrupts and piss-poor performance.
 
