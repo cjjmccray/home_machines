@@ -1,17 +1,36 @@
 # New Kitchen PC
-## AVerMedia TV Card
+
+## Tue 27-Mar-2018
+### AVerMedia TV Card
 AVerTV Hybrid Volar T2 - H831
 - Search for the code "H831" on the AVerMedia website
-- [Driver](http://www.avermedia.com/tv_more/download/avertv_hybrid_volar_t2#ans_part)
-- Scanned and found all previous TV channels (YAY!) - though I still suspect there's only software issues with the cheaper DVB-T sticks I got from China
+- [Driver (32-bit)](http://www.avermedia.com/tv_more/download/avertv_hybrid_volar_t2#ans_part)
+- Scanned and found all previous TV channels (YAY!) - though I still suspect there's only software issues with the cheaper DVB-T UTL-2832 chip-based sticks I got from China.
 
-## Womble MPEG Video Wizard DVD 5.0
+### Womble MPEG Video Wizard DVD 5.0
 - I have a licence for this, and can use it on multiple machines that I use
 - Not sure where the licence codes are though!
 - Using a 30-day free trial code for now (27-Mar-2018, so expires on 25-Apr-2018)
-- [Download](http://www.womble.com/download/)
+- [Download (32-bit)](http://www.womble.com/download/)
 - [Manual](http://www.womble.com/docs/dvd-guide.pdf)
 
+### Notepad ++ and Geany
+- [Notepad++ (64-bit)](https://notepad-plus-plus.org/)
+- [Geany (32-bit)](https://www.geany.org/)
+
+## Previously...
+### Avast & 7-Zip
+Avast anti-virus installed.  7-Zip 64-bit as well.
+
+### Adobe PDF Reader and PDF Creator
+Installed both.
+
+### TV and Video software
+MP2 and SichboPVR both installed and uninstalled (didn't work with the Chinese DVB-T USB sticks).
+
+### Libre Office and Java Runtime
+- Java Runtime 8u162 64-bit to get the database to work
+- Libre Office 6.0.1 64-bit
 
 # Old Kitchen PC.  Migrating to new machine, 27-Mar-2018.
 ## Software to migrate
