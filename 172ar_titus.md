@@ -22,6 +22,8 @@
 ### Network Drives
 Connected R: to \\rome\drive_4 and M: to \\geta\music.  Trying to edit a video clip on R: back to R: (Prom 01 concert from 2010) and though it starts to work, about 15% in the copy/edit stops and "completes".  Also getting disconnected network drives and the network icon in the lower-right tray showing disconnected.  Copied the file directly to C: and operated the edit only from C: to C: and it works OK.  Suspect driver or worse, intermittent hardware failure/complete failure.  Short-term fix if that's the case is a USB network connector, but ultimately this is how your old office PC went and will eventually go stupid with massive interrupts and piss-poor performance.
 
+Tested by editing an episode of The Simpsons from C: to R: and all OK.  Unsure if this has now magically fixed itself or will be a recurrent problem...
+
 ### DVD+RW drive
 Still not recognised.  Will revert to the DVD-ROM drive that came with the machine.  That's not recognised either.  Suspect either a driver issue (though Windows isn't finding the drive at all) or an interface/hardware issue in the machine.
 
