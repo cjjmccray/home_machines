@@ -8,3 +8,5 @@ Old Kitchen PC.  Migrating to new machine, 27-Mar-2018.
 - MPEG Video Wizard DVD 5.0: copied to: \\Geta\software and os images\Miscellany\MPEG Video Wizard DVD\C-ProgFiles
   - the licence document is upstairs somewhere
   - I suspect there are hidden files and/or registry keys that this requires (I seem to recall the copy/reload method doesn't work)
+- Java runtime, Libre Office, Adobe PDF Reader, GiMP, VLC, MP3DirectCut (v2.13 is installed, and I can't figure out how to use the later versions!), Audacity, ImgBurn, uTorrent, Geany, Notepad++
+  - Deprecated/not needed: FileZilla, UltraVNC Server and Viewer, Zinf, freac (free audio convertor?)
