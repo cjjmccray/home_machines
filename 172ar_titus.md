@@ -1,6 +1,14 @@
 # New Kitchen PC
 
 ## Tue 27-Mar-2018
+### DVD+RW drive
+Still not recognised.  Will revert to the DVD-ROM drive that came with the machine.
+
+### EasyWeather
+- Found the software on [this page here](https://www.ambientweather.com/software.html)
+- Scroll and you can see the EasyWeather software (you don't have to pay any money)
+- Installed OK and it immediately finds the weather system (yay!)
+
 ### AVerMedia TV Card
 AVerTV Hybrid Volar T2 - H831
 - Search for the code "H831" on the AVerMedia website
@@ -10,7 +18,7 @@ AVerTV Hybrid Volar T2 - H831
 ### Womble MPEG Video Wizard DVD 5.0
 - I have a licence for this, and can use it on multiple machines that I use
 - Not sure where the licence codes are though!
-- Using a 30-day free trial code for now (27-Mar-2018, so expires on 25-Apr-2018)
+- Found full licence I bought in 2009 (and reprinted from e-mail in 2012) - yay!
 - [Download (32-bit)](http://www.womble.com/download/)
 - [Manual](http://www.womble.com/docs/dvd-guide.pdf)
 
