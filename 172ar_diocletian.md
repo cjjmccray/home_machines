@@ -5,6 +5,12 @@ Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+### 04-May-2018
+Installed GNOME Tweaks (search "Tweaks" in the Software Centre) to allow correct operation of suspend when you shut the laptop lid.
+
+### 03-May-2018
+Upgraded to Ubuntu 18.04.
+
 ### 04-Nov-2017
 Added get_iplayer. Had to [install this PPA](https://launchpad.net/~jon-hedgerows/+archive/ubuntu/get-iplayer):
 ```
