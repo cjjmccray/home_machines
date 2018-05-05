@@ -5,8 +5,32 @@ Name chosen: [diocletian](http://www.roman-emperors.org/dioclet.htm)
 ## Linux Ubuntu
 User home folders *are* encrypted.
 
+
 ### 04-May-2018
-Installed GNOME Tweaks (search "Tweaks" in the Software Centre) to allow correct operation of suspend when you shut the laptop lid.
+#### Installed GNOME Tweaks
+Search "Tweaks" in the Software Centre - allows correct operation of suspend when you shut the laptop lid.
+
+#### Switched to SSD
+Cloned Ubuntu boot partition onto SSD from old HP Laptop. Swapped disks over (old HDD has: Windows, Slackware 14.1 on sda6, Ubuntu 17.10 on sda7 and an unused/uninstalled FreeDOS partition, as well as Linux Swap and Lenovo Support/Restore).
+
+#### sysbench
+Installed sysbench - benchmarking utility. Install command and some sample uses for [CPU](https://askubuntu.com/questions/634513/cpu-benchmarking-utility-for-linux#634516) and [fileio](https://www.howtoforge.com/how-to-benchmark-your-system-cpu-file-io-mysql-with-sysbench#-file-io-benchmark) testing:
+```
+sudo apt-get install sysbench
+sysbench --test=cpu --cpu-max-prime=20000 run
+sysbench --test=fileio --file-total-size=24G prepare
+sysbench --test=fileio --file-total-size=24G --file-test-mode=rndrw --time=300 --max-requests=0 run
+sysbench --test=fileio --file-total-size=24G cleanup
+```
+
+#### Hipchat
+HipChat 4 - removed old copy and installed new to login to my MetaPack HipChat account.
+```
+chrism@diocletian:~/Downloads$ sudo dpkg -r HipChat4
+chrism@diocletian:~/Downloads$ wget https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.30.4.1672-Linux.deb
+chrism@diocletian:~/Downloads$ sudo dpkg -i HipChat4-4.30.4.1672-Linux.deb
+```
+Fails to load - complains about lack of internet connection.
 
 ### 03-May-2018
 Upgraded to Ubuntu 18.04.
