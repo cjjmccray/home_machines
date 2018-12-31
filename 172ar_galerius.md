@@ -1,4 +1,19 @@
-RasPi B v3, Raspbian, FlightRader24.com node
+# RasPi B v3, Raspbian, FlightRader24.com node
+
+[This is the Google Docs spreadsheet](https://docs.google.com/spreadsheets/d/13g7ZNwzXMAQLAqDtCsuYq0GRw1QThN0PuuL1DDB-NSY/edit#gid=512237026) used to track stats etc...
+
+## 31-Dec-2018
+FR node been uncommunicative for months. IT IS WORKING... but the key with the FR24 website has expired.
+- [House Lat Long](https://www.google.com/maps/place/53%C2%B027'29.9%22N+2%C2%B016'10.2%22W/@53.4583,-2.2716887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.4583!4d-2.2695): 53.4583,-2.2695
+- [Height above sea level](https://www.maps.ie/coordinates.html): 32m - add 8m for the height in the house: 40m = 131.234 feet
+
+Then followed my nose and the instructions about restarting the software - still doesn't connect.
+
+The FR24 node web interface offers to check the settings, edit them and restart...
+- http://192.168.1.41:8754/index.html
+- http://192.168.1.41:8754/tracked.html
+
+But still no planes being detected as the config seems to default to the wrong type of detector.
 
 ## 04-Feb-2017
 Actually carried out between Christmas 2016 and New Year 2017, shortened the antenna to 67mm and mounted (glued) onto an old coffee tub, [using these instructions](http://forum.flightradar24.com/threads/9711-Optimize-the-Whip-Antenna-Which-Is-Supplied-With-DVB-T-Dongle).
