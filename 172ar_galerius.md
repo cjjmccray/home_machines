@@ -13,7 +13,7 @@ The FR24 node web interface offers to check the settings, edit them and restart.
 - http://192.168.1.41:8754/index.html
 - http://192.168.1.41:8754/tracked.html
 
-But still no planes being detected as the config seems to default to the wrong type of detector.
+But still no planes being detected as the config seems to default to the wrong type of detector.  Rebooted the Pi and then [followed these instructions to get dump1090 and fr24feed working](https://forum.flightradar24.com/threads/11589-Feed-issues-Dump1090-problem-with-latest-package/page3).
 
 ## 04-Feb-2017
 Actually carried out between Christmas 2016 and New Year 2017, shortened the antenna to 67mm and mounted (glued) onto an old coffee tub, [using these instructions](http://forum.flightradar24.com/threads/9711-Optimize-the-Whip-Antenna-Which-Is-Supplied-With-DVB-T-Dongle).
