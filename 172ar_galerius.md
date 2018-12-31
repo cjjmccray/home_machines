@@ -4,8 +4,8 @@
 
 ## 31-Dec-2018
 FR node been uncommunicative for months. IT IS WORKING... but the key with the FR24 website has expired.
-- [House Lat Long](https://www.google.com/maps/place/53%C2%B027'29.9%22N+2%C2%B016'10.2%22W/@53.4583,-2.2716887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.4583!4d-2.2695): 53.4583,-2.2695
-- [Height above sea level](https://www.maps.ie/coordinates.html): 32m - add 8m for the height in the house: 40m = 131.234 feet
+- House Lat/Long - see the spreadsheet
+- Height above sea level - see the spreadsheet
 
 Then followed my nose and the instructions about restarting the software - still doesn't connect.
 
