@@ -1,0 +1,17 @@
+
+
+Installing ZoneMinder
+
+Perl hit a snag:
+
+-- Could NOT find PerlModules (missing: PERLMODULES_DATE_MANIP_MODULE PERLMODULES_LWP_USERAGENT_MODULE PERLMODULES_SYS_MMAP_MODULE)
+
+Google PERLMODULES_DATE_MANIP_MODULE
+cpan Date::Manip
+
+Now try:
+cpan LWP::UserAgent
+
+cpan Sys::Mmap
+
+not sure if these are case sensitive
