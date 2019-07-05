@@ -33,11 +33,13 @@ Following [these instructions for setting up mysql](http://www.neiland.net/blog/
 
 Unable to change the mysql password...
 
-```root@eutropia:~# mysqladmin -u root password '<<<password>>>'
+``` root@eutropia:~# mysqladmin -u root password '{password}'
 mysqladmin: connect to server at 'localhost' failed
 error: 'Can't connect to local MySQL server through socket '/var/run/mysql/mysql.sock' (111)'
 Check that mysqld is running and that the socket: '/var/run/mysql/mysql.sock' exists!
-root@eutropia:~# ```
+root@eutropia:~#
+```
+
 
 Checking ```/var/lib/mysql/eutropia.cjjm.eu.err``` and there are multiple issues with mysql starting up.  
 
@@ -56,7 +58,8 @@ drwx------ 2 root  root      4096 Jul  5 12:05 test/
 -rw-rw---- 1 mysql mysql       52 Jul  5 13:40 aria_log_control
 -rw-rw---- 1 mysql mysql    24576 Jul  5 13:40 aria_log.00000001
 root@eutropia:/var/lib/mysql# chown -R mysql:mysql *
-root@eutropia:/var/lib/mysql# ```
+root@eutropia:/var/lib/mysql# 
+```
 
 and now it seems to be working:
 
@@ -64,7 +67,8 @@ and now it seems to be working:
  1029 pts/0    S      0:00 /bin/sh /usr/bin/mysqld_safe --datadir=/var/lib/mysql --pid-file=/var/run/mysql/mysql.pid --skip-networking
  1109 pts/0    Sl     0:00 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mysql/plugin --user=mysql --skip-networking --log-error=/var/lib/mysql/eutropia.cjjm.eu.err --pid-file=/var/run/mysql/mysql.pid
  1150 pts/0    S+     0:00 grep mysql
-root@eutropia:/var/lib/mysql# ```
+root@eutropia:/var/lib/mysql# 
+```
 
 and the password change command works OK.
 
@@ -73,7 +77,8 @@ Following the suggestion in ```/etc/rc.d/rc.mysqld```, to run ```mysql_install_d
 Dropping back to ```mysql_install_db``` gives an error that the mysql user table already exists, and to use ```mysql_upgrade``` instead:
 
 ```mysql.user table already exists!
-Run mysql_upgrade, not mysql_install_db```
+Run mysql_upgrade, not mysql_install_db
+```
 
 So finally... ```mysql_upgrade``` has done a pile of stuff and looks to have worked.
 
@@ -93,7 +98,8 @@ Table of permissions in mysql is slightly different:
 +--------+------------------+
 4 rows in set (0.006 sec)
 
-MariaDB [(none)]> quit ```
+MariaDB [(none)]> quit 
+```
 
 Both zmuser and root user should have a zoneminder host as well, though that might not be a problem as we're working directly on the box.
 
@@ -108,13 +114,3 @@ Last sed command didn't work, had to manually edit ```/etc/httpd/httpd.conf```.
 
 # Location, IP etc...
 tba - likely in the cellar cupboard
-
-
-
-
-Now try:
-cpan LWP::UserAgent
-
-cpan Sys::Mmap
-
-not sure if these are case sensitive
