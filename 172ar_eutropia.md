@@ -148,6 +148,10 @@ root@eutropia:/etc/httpd#
 
 OOOH!
 
+OK, we have a user interface on [http://eutropia/zm](http://eutropia/zm).  Configuring it to handle the camera - experimenting with rtsp/stream link and http/snapshot-file links.  None working, as yet...
+
+Another perl module - in the ZM configuration for the camera, there's a link at the top-right for "ONVIF" which is another marque/brand for Herospeed.  It might be that the camera has been autodetected.  However, the settings fail to work, and at a command prompt, ```/usr/bin/zmonvif-probe.pl probe``` fails, with a missing perl module, ```Class::Std::Fast```. So... ```cpan Class::Std::Fast``` and try again.
+
 
 # Hardware
 [Raspberry Pi 3 model B+](https://www.raspberrypi.org/blog/raspberry-pi-3-model-bplus-sale-now-35/) bought spring 2019.
