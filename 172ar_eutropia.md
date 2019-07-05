@@ -22,6 +22,10 @@ Which suggests using the following for the rest...
 - ```cpan Sys::Mmap```
   - (```SYS::MMap``` doesn't work - so they are case-sensitive)
 
+Install successful...
+- ```If this is a new installation, you will need to create a MySQL database for ZoneMinder to use. See /usr/doc/ZoneMinder-<version>/README.SLACKWARE```
+
+Stopping at this point, as for some reason MySQL isn't running, despite setting ```/etc/rc.d/rc.mysqld``` to be executable and running it with ```start``` as the command-line option.
 
 
 # Hardware
