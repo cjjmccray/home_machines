@@ -152,7 +152,16 @@ OK, we have a user interface on [http://eutropia/zm](http://eutropia/zm).  Confi
 
 Another perl module - in the ZM configuration for the camera, there's a link at the top-right for "ONVIF" which is another marque/brand for Herospeed.  It might be that the camera has been autodetected.  However, the settings fail to work, and at a command prompt, ```/usr/bin/zmonvif-probe.pl probe``` fails, with a missing perl module, ```Class::Std::Fast```. So... ```cpan Class::Std::Fast``` and try again.
 
-And again... ```Data::Dump``` so ```cpan Data::Dump```...
+And again... ```Data::Dump``` so ```cpan Data::Dump``` ...
+And again... ```SOAP::WSDL::Transport::HTTP``` so ```cpan SOAP::WSDL::Transport::HTTP``` ...
+And again... ```Data::UUID``` so ```cpan Data::UUID``` ...
+And again... ```IO::Socket::Multicast``` so ```cpan IO::Socket::Multicast``` ...
+
+```root@eutropia:/etc/rc.d# /usr/bin/zmonvif-probe.pl probe
+Name "ZoneMinder::ONVIF::verbose" used only once: possible typo at /usr/bin/zmonvif-probe.pl line 81.
+http://192.168.1.242/onvif/device_service, 1.2, (type='network_video_transmitter', type='video_encoder', type='audio_encoder', manufacturer='HeroSpeed', type='ptz', Profile='Streaming', Profile='G', Profile='G', hardware='IPCamera', name='HeroSpeed', location='Guangzhou')
+root@eutropia:/etc/rc.d# 
+```
 
 
 # Hardware
