@@ -107,6 +107,47 @@ Timezone used was Europe/London.
 
 Last sed command didn't work, had to manually edit ```/etc/httpd/httpd.conf```.
 
+So, last part is to start Apache and ZoneMinder. 
+
+Apache fails to start:
+```root@eutropia:~# chmod 755 /etc/rc.d/rc.httpd; /etc/rc.d/rc.httpd start
+AH00526: Syntax error on line 62 of /etc/httpd/extra/zm.conf:
+Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+root@eutropia:~# 
+```
+
+The rewrite engine module is commented out in ```/etc/httpd/httpd.conf``` ([tip from here](https://askbot.org/en/question/10237/unable-to-start-apache-server-error-in-rewriteengine/)) - edit it, find ```rewrite_module``` and uncomment.
+
+Now try the command to start Apache and... silent.  It's started OK.
+
+Now try the command to start ZoneMinder:
+```chmod 755 /etc/rc.d/rc.zm; /etc/rc.d/rc.zm start```
+and it fails:
+```root@eutropia:/etc/httpd# chmod 755 /etc/rc.d/rc.zm; /etc/rc.d/rc.zm start
+Starting ZoneMinder: 07/05/2019 14:57:44.768027 zmpkg[1438].INF [main:57] [Command: start]
+07/05/2019 14:57:44.828045 zmpkg[1438].INF [main:305] [Sanity checking States table...]
+07/05/2019 14:57:44.847649 zmpkg[1438].INF [main:97] [Command: start]
+Can't locate Sys/MemInfo.pm in @INC (you may need to install the Sys::MemInfo module) (@INC contains: /usr/local/lib/perl5 /usr/local/share/perl5 /usr/lib/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5 /usr/share/perl5) at /usr/bin/zmdc.pl line 158.
+BEGIN failed--compilation aborted at /usr/bin/zmdc.pl line 158.
+07/05/2019 14:57:45.407509 zmpkg[1438].ERR [ZoneMinder::General:174] [Unable to run "sudo -u apache /usr/bin/zmdc.pl check", output is "", status is 2]
+                                                           [FAILED]
+root@eutropia:/etc/httpd# 
+```
+
+Another perl module, ```Sys::MemInfo``` seems to be missing, so... ```cpan Sys::MemInfo``` and let's see what happens.
+
+Try ZoneMinder again and...
+```root@eutropia:/etc/httpd# chmod 755 /etc/rc.d/rc.zm; /etc/rc.d/rc.zm start
+Starting ZoneMinder: 07/05/2019 15:00:07.345548 zmpkg[1575].INF [main:57] [Command: start]
+07/05/2019 15:00:07.362355 zmpkg[1575].INF [main:305] [Sanity checking States table...]
+07/05/2019 15:00:07.396653 zmpkg[1575].INF [main:97] [Command: start]
+07/05/2019 15:00:10.249991 zmpkg[1575].INF [main:205] [Single server configuration detected. Starting up services.]
+                                                           [  OK  ]
+root@eutropia:/etc/httpd#
+```
+
+OOOH!
+
 
 # Hardware
 [Raspberry Pi 3 model B+](https://www.raspberrypi.org/blog/raspberry-pi-3-model-bplus-sale-now-35/) bought spring 2019.
