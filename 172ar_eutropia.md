@@ -163,6 +163,21 @@ http://192.168.1.242/onvif/device_service, 1.2, (type='network_video_transmitter
 root@eutropia:/etc/rc.d# 
 ```
 
+Right... some more fiddling was done to enable cgi-bin...
+- aaaagh! there was an awful lot of this!!!
+
+"LoadModule cgi_module modules/mod_cgi.so or LoadModule cgi_module modules/mod_cgid.so" from [this Stackoverflow question and answer](https://stackoverflow.com/questions/7471859/cgi-script-is-not-executing)
+
+
+
+And edited the ```/etc/rc.d/rc.zm``` file so without parameters it now does a restart (stop and start) and where the asterisk for no parameter catch was, this now is a formal 'help' parameter.
+
+### Sat 06-Jul-2019
+There's an error from [the ZMS test json structure](http://192.168.1.33/zm/api/configs/view/ZM_PATH_ZMS.json) from ZoneMinder.  Buried in the error report is "Call to undefined function apc_fetch()".  [This ZoneMinder forum discussion](https://forums.zoneminder.com/viewtopic.php?t=27454) mentions missing apcu module.  ```pecl install apcu``` to install it, and edit ```/etc/php.ini``` to add a line: ```extension=apcu.so``` (search for 'extension=' and add just after there).
+
+Need to restart Apache etc... - easier now to do a full restart.
+
+
 
 # Hardware
 [Raspberry Pi 3 model B+](https://www.raspberrypi.org/blog/raspberry-pi-3-model-bplus-sale-now-35/) bought spring 2019.
