@@ -2,7 +2,12 @@
 Name chosen: [eutropia](http://www.roman-emperors.org/maxherc.htm#Note%201)
 
 
-## Slackware 14.2 ([SARPi](http://sarpi.fatdog.eu/index.php?p=getslack))
+## [Raspbian Buster](https://www.raspberrypi.org/blog/buster-the-new-version-of-raspbian/)
+
+Did try and install using Slackware 14.2 but ran into too many problems with ZoneMinder (see below).
+
+### Previous install
+Slackware 14.2 ([SARPi](http://sarpi.fatdog.eu/index.php?p=getslack))
 User home folders are not encrypted.  Eventually this machine will be running ZoneMinder for cameras and acting as a file server accessible from outside the house (for file sharing when I'm away, as a hot-backup for some files from 7bc, and for Alma to be able to grab some stuff I place on the drive from inside the home network).
 
 
@@ -177,7 +182,164 @@ There's an error from [the ZMS test json structure](http://192.168.1.33/zm/api/c
 
 Need to restart Apache etc... - easier now to do a full restart.
 
+### Mon 08-Jul-2019
+Raspbian Buster installed on 32Gb memory card. Downloaded zip image and installed balena etcher (as recommended on the Raspbian website) to "burn" the zip file onto the memory card (it creates 
 
+
+
+- Changed Raspbian install to:
+  - fixed IP address 192.168.1.33 / 255.255.254.0 / 192.168.0.2
+  - boot to command line at first
+  - allow SSH
+  - change pi password
+
+Following a mash-up of instructions from the ZoneMinder wiki: [here](https://wiki.zoneminder.com/Raspbian#How_to_install_ZoneMinder_1.30.4_on_Raspberry_PI_3_with_Raspbian_9_.28Stretch.29) and [here](https://wiki.zoneminder.com/Debian_9_64-bit_with_Zoneminder_1.30.4_the_Easy_Way#Debian_9_with_Zoneminder_1.30.4).
+
+- sudo apt install apache2
+- apt install php mariadb-server php-mysql libapache2-mod-php7.0
+  - fails as it cannot find the libapache2-mod-php7.0
+  - removed that and...
+- apt install php mariadb-server php-mysql
+  - installs OK
+  - php is installed - type ```php -v``` at a terminal and it works OK:
+```pi@eutropia:~ $ php -v
+PHP 7.3.4-2 (cli) (built: Apr 13 2019 19:05:48) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.4, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.3.4-2, Copyright (c) 1999-2018, by Zend Technologies
+pi@eutropia:~ $ 
+```
+- mysql_secure_installation
+- sudo mv /etc/mysql/my.cnf /etc/mysql/my.cnf_old 
+  - (didn't delete, just moved it out of the way)
+- sudo cp /etc/mysql/mariadb.conf.d/50-server.cnf /etc/mysql/my.cnf
+- sudo nano /etc/mysql/my.cnf
+  - change existing lines to:
+  - character-set-server = latin1
+  - collation-server = latin1_swedish_ci
+  - (the correct collation-server is latin1_swedish_ci, from [this page in the MySQL 5.7.2 manual](https://dev.mysql.com/doc/refman/5.7/en/charset-mysql.html)
+- sudo service mariadb restart
+- sudo nano /etc/apt/sources.list
+  - add: deb http://www.deb-multimedia.org buster main non-free
+  - (was: deb http://www.deb-multimedia.org stretch main non-free, but trying buster as that's the current version)
+- sudo apt update
+- wget http://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+- sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+- apt install deb-multimedia-keyring
+  - is already the latest version
+- sudo apt update
+- sudo apt upgrade
+- sudo apt dist-upgrade
+  - nothing to do
+  - sudo apt autoremove 
+  - to reveal 11Mb of space
+- sudo apt install zoneminder vlc-plugin-base php7.0-gd
+  - fails as cannot find php7.0-gd
+  - sudo apt install zoneminder vlc-plugin-base
+  - as it installed, apcu and php7.3-gd were found OK
+- sudo apt install samba
+  - also created user chrism, samba user chrism, edited fstab to make the 4Tb appear at boot, and configured Samba share using the old Slackware config share file (copying and pasting bits into the Raspbian smb.conf file)
+- sudo chmod 740 /etc/zm/zm.conf
+- sudo chown root:www-data /etc/zm/zm.conf
+- sudo systemctl enable zoneminder.service
+- sudo adduser www-data video
+- sudo systemctl start zoneminder.service
+```Job for zoneminder.service failed because the control process exited with error code.
+See "systemctl status zoneminder.service" and "journalctl -xe" for details.
+pi@eutropia:/etc $ sudo systemctl status zoneminder.service
+● zoneminder.service - ZoneMinder CCTV recording and surveillance system
+   Loaded: loaded (/lib/systemd/system/zoneminder.service; enabled; vendor prese
+   Active: failed (Result: exit-code) since Mon 2019-07-08 19:44:56 BST; 9s ago
+     Docs: http://zoneminder.readthedocs.org/en/latest/
+  Process: 25880 ExecStart=/usr/bin/zmpkg.pl start (code=exited, status=255/EXCE
+
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: DBI connect('database=zm;host=localhos
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: Can't connect to db at /usr/share/perl
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: BEGIN failed--compilation aborted at /
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: Compilation failed in require at /usr/
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: BEGIN failed--compilation aborted at /
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: Compilation failed in require at /usr/
+Jul 08 19:44:56 eutropia zmpkg.pl[25880]: BEGIN failed--compilation aborted at /
+Jul 08 19:44:56 eutropia systemd[1]: zoneminder.service: Control process exited,
+Jul 08 19:44:56 eutropia systemd[1]: zoneminder.service: Failed with result 'exi
+Jul 08 19:44:56 eutropia systemd[1]: Failed to start ZoneMinder CCTV recording a
+
+pi@eutropia:/etc $ 
+```
+- Hmmm... I've not setup MariaDB properly
+  - nano .my.cnf
+    - create this with the root user's name and password
+  - sudo mysql < /usr/share/zoneminder/db/zm_create.sql
+  - sudo mysql -e "grant select,insert,update,delete,create on zm.* to 'zmuser'@localhost identified by 'zmpass';"
+  - rm .my.cnf
+    - remove this as we're done with it
+- sudo chmod 740 /etc/zm/zm.conf
+- sudo chown root:www-data /etc/zm/zm.conf
+- ln -s /etc/zm/apache.conf /etc/apache2/conf-enabled/zoneminder.conf
+  - this fails as the file already exists
+  - don't care about it, the one that's there should work
+- sudo systemctl enable zoneminder.service
+- sudo adduser www-data video
+- sudo systemctl start zoneminder.service
+```pi@eutropia:~ $ sudo systemctl status zoneminder.service
+● zoneminder.service - ZoneMinder CCTV recording and surveillance system
+   Loaded: loaded (/lib/systemd/system/zoneminder.service; enabled; vendor prese
+   Active: active (running) since Mon 2019-07-08 19:59:37 BST; 6s ago
+     Docs: http://zoneminder.readthedocs.org/en/latest/
+  Process: 26043 ExecStart=/usr/bin/zmpkg.pl start (code=exited, status=0/SUCCES
+ Main PID: 26055 (zmdc.pl)
+    Tasks: 6 (limit: 2200)
+   Memory: 70.9M
+   CGroup: /system.slice/zoneminder.service
+           ├─26055 /usr/bin/perl -wT /usr/bin/zmdc.pl startup
+           ├─26082 /usr/bin/perl -wT /usr/bin/zmfilter.pl --filter_id=1 --daemon
+           ├─26087 /usr/bin/perl -wT /usr/bin/zmfilter.pl --filter_id=2 --daemon
+           ├─26092 /usr/bin/perl -wT /usr/bin/zmaudit.pl -c
+           ├─26099 /usr/bin/perl -wT /usr/bin/zmwatch.pl
+           └─26105 /usr/bin/perl -wT /usr/bin/zmstats.pl
+
+Jul 08 19:59:36 eutropia zmdc[26092]: INF ['zmaudit.pl -c' started at 19/07/08 1
+Jul 08 19:59:37 eutropia zmfilter_2[26087]: INF [Scanning for events using filte
+Jul 08 19:59:37 eutropia zmfilter_2[26087]: INF [Checking filter Update DiskSpac
+Jul 08 19:59:37 eutropia zmdc[26055]: INF ['zmwatch.pl' starting at 19/07/08 19:
+Jul 08 19:59:37 eutropia zmdc[26099]: INF ['zmwatch.pl' started at 19/07/08 19:5
+Jul 08 19:59:37 eutropia zmwatch[26099]: INF [Watchdog starting, pausing for 30 
+Jul 08 19:59:37 eutropia zmdc[26055]: INF ['zmstats.pl' starting at 19/07/08 19:
+Jul 08 19:59:37 eutropia zmdc[26105]: INF ['zmstats.pl' started at 19/07/08 19:5
+Jul 08 19:59:37 eutropia systemd[1]: Started ZoneMinder CCTV recording and surve
+Jul 08 19:59:38 eutropia zmstats[26105]: INF [Stats Daemon starting in 30 second
+
+pi@eutropia:~ $ 
+```
+BOOM! It's running OK.
+
+- sudo a2enmod cgi
+- sudo a2enconf zoneminder
+- sudo service apache2 restart
+
+Now, [the ZoneMinder home page](http://eutropia/zm/index.php) is reporting an error: 
+- ZoneMinder is not installed properly: php's date.timezone is not set to a valid timezone
+
+I skipped the Cambozola configuration (as I don't use Internet Explorer).
+
+Memory settings:
+- sudo su -
+- echo "kernel.shmmax = 134217728" >> /etc/sysctl.conf
+- exit
+- sudo su -
+- echo "kernel.shmall = 2097152" >> /etc/sysctl.conf
+- exit
+
+And here's PHP's default time zone:
+- sudo nano /etc/php5/apache2/php.ini
+  - hmmm... php5...
+  - found the php.ini file at:
+  - sudo nano /etc/php/7.3/apache2/php.ini
+  - go and find 'date.timezone' and uncomment and set to Europe/London
+- sudo service apache2 restart
+  - and we should have ZoneMinder up and running...
+
+CHEF'S KISS! It's up.  Now to configure it...
 
 # Hardware
 [Raspberry Pi 3 model B+](https://www.raspberrypi.org/blog/raspberry-pi-3-model-bplus-sale-now-35/) bought spring 2019.
