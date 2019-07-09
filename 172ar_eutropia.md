@@ -346,8 +346,22 @@ ZoneMinder
 - the Porch camera... figured out what was wrong... drop the "http://" from the address and it works OK
 - changed the permissions - took some figuring out, set the owner to www-data, group www-data, and u+rwx, go+rx on the ZoneMinder tree on the Maxtor drive and it works...
 
+### Tue 09-Jul-2019
+Early hours trying to get zmNinja working. GAH! Frustrated. Proposed to put ```.htaccess``` files pretty much *everywhere* which has to degrade the security ffs.
+
+Afternoon - the Porch camera keeps failing. No obvious idea why.  Inspected the ZoneMinder logs, and there's a lot of file creation issues in ```/var/cache/zoneminder/...``` - but hang on, I configured ZoneMinder to ```/disks/maxtor-m3/ZoneMinder/events```.
+
+Sod it, empty the ```/var/cache/zoneminder``` folder and delete it, then create a symbolic link: ```/var/cache/zoneminder -> /disks/maxtor-m3/ZoneMinder```.  And the errors on Porch camera pretty much go away.
+
+Setup a Zone on the Hall camera to point at the letterbox.  Accepted preset default for the sensitivity.  First test at 1553 09-Jul and it did not trigger. Changed preset to "Fast, High Sensitivity" - now need someone to chuck something through the door...  Also changed the Zone so it extended down to the floor to improve it's likelihood of spotting mail.
+
+
+
 Last things...
+- get zmNinja working from my phone in the house
+- then pinhole the house gateway to allow zmNinja to work from outside the house
 - install new camera in the Porch, not sure what to do with the old one (junk/sell?)
+  - paused, waiting on a power supply to turn up Fri 12/Sat 13
 - set up logrotate to archive old ZoneMinder stuff - anything over 1 month old tar/gz; anything over 1 year old delete
   - will be interesting to learn to use logrotate on this given it drives me nuts in a professional domain this isn't the norm...
 - heatsink kit for the Pi or a box with a heatsink integral to the design (the lid is warm, and I've only just started getting this to do stuff)
