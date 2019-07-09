@@ -350,7 +350,7 @@ Last things...
 - install new camera in the Porch, not sure what to do with the old one (junk/sell?)
 - set up logrotate to archive old ZoneMinder stuff - anything over 1 month old tar/gz; anything over 1 year old delete
   - will be interesting to learn to use logrotate on this given it drives me nuts in a professional domain this isn't the norm...
-
+- heatsink kit for the Pi or a box with a heatsink integral to the design (the lid is warm, and I've only just started getting this to do stuff)
 
 # Hardware
 [Raspberry Pi 3 model B+](https://www.raspberrypi.org/blog/raspberry-pi-3-model-bplus-sale-now-35/) bought spring 2019.
