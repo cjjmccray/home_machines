@@ -185,8 +185,6 @@ Need to restart Apache etc... - easier now to do a full restart.
 ### Mon 08-Jul-2019
 Raspbian Buster installed on 32Gb memory card. Downloaded zip image and installed balena etcher (as recommended on the Raspbian website) to "burn" the zip file onto the memory card (it creates 
 
-
-
 - Changed Raspbian install to:
   - fixed IP address 192.168.1.33 / 255.255.254.0 / 192.168.0.2
   - boot to command line at first
@@ -341,9 +339,23 @@ And here's PHP's default time zone:
 
 CHEF'S KISS! It's up.  Now to configure it...
 
+ZoneMinder
+- accept the privacy message
+- change the storage default to: ```/disks/maxtor-m3/ZoneMinder/events```
+- configured the Hall camera first
+- the Porch camera... figured out what was wrong... drop the "http://" from the address and it works OK
+- changed the permissions - took some figuring out, set the owner to www-data, group www-data, and u+rwx, go+rx on the ZoneMinder tree on the Maxtor drive and it works...
+
+Last things...
+- install new camera in the Porch, not sure what to do with the old one (junk/sell?)
+- set up logrotate to archive old ZoneMinder stuff - anything over 1 month old tar/gz; anything over 1 year old delete
+  - will be interesting to learn to use logrotate on this given it drives me nuts in a professional domain this isn't the norm...
+
+
 # Hardware
 [Raspberry Pi 3 model B+](https://www.raspberrypi.org/blog/raspberry-pi-3-model-bplus-sale-now-35/) bought spring 2019.
 
 
 # Location, IP etc...
-tba - likely in the cellar cupboard
+- IP: defined.
+- Cellar cupboard
